@@ -88,6 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
+
+
+// MARK: Creating a global instance of App Delegate and NSManagedObjectContext so that we can access any of the above created core data methods, anytime-anywhere. This is done only once per app.
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
 
